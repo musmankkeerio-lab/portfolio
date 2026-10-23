@@ -1,1 +1,307 @@
-print("helo usman")
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usman | My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #07111f;
+            color: #f1f5f9;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #091426;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #233450;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #60a5fa;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #a78bfa;
+        }
+
+        section {
+            padding: 65px 8%;
+        }
+
+        .hero {
+            min-height: 390px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background:
+                radial-gradient(circle at top right,
+                #172b55, #07111f 65%);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 68px);
+            line-height: 1.2;
+            margin: 12px 0;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg,
+                #38bdf8, #a78bfa);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero h3 {
+            color: #93c5fd;
+            font-size: 23px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: #cbd5e1;
+            margin: 15px 0 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 22px;
+            margin: 5px 8px 5px 0;
+            border-radius: 25px;
+            background: linear-gradient(90deg,
+                #0ea5e9, #8b5cf6);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 25px #2563eb66;
+        }
+
+        .outline {
+            background: transparent;
+            border: 1px solid #64748b;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            color: #60a5fa;
+        }
+
+        .about-text {
+            max-width: 750px;
+            color: #cbd5e1;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .card {
+            padding: 23px;
+            background: #0c192c;
+            border: 1px solid #263b5b;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #818cf8;
+        }
+
+        .card h3 {
+            color: #93c5fd;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        .tag {
+            display: inline-block;
+            color: #bfdbfe;
+            border: 1px solid #334e75;
+            border-radius: 15px;
+            padding: 2px 10px;
+            font-size: 12px;
+            margin: 10px 4px 0 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #233450;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+
+            nav a {
+                margin: 0 5px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">&lt;/&gt; Usman</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <p>WELCOME TO MY PORTFOLIO</p>
+
+        <h1>Hi, I'm <span>Usman</span></h1>
+
+        <h3>Student | Web Developer | Learner</h3>
+
+        <p>
+            I am learning web development and programming.
+            I enjoy building projects, solving problems,
+            and improving my coding skills every day.
+        </p>
+
+        <div>
+            <a class="btn" href="#projects">View My Projects →</a>
+            <a class="btn outline" href="#about">About Me</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+
+        <p class="about-text">
+            Hello! I'm Usman, a student passionate about
+            technology and coding. I am learning HTML, CSS,
+            JavaScript, and Python. My goal is to build useful
+            projects and grow as a developer.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">My <span>Skills</span></h2>
+
+        <p class="about-text">
+            Technologies I am learning and practising.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>🌐 HTML</h3>
+                <p>Building the structure of web pages.</p>
+            </div>
+
+            <div class="card">
+                <h3>🎨 CSS</h3>
+                <p>Creating attractive layouts and designs.</p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ JavaScript</h3>
+                <p>Adding interaction and functionality.</p>
+            </div>
+
+            <div class="card">
+                <h3>🐍 Python</h3>
+                <p>Learning programming and problem solving.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">My <span>Projects</span></h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>📊 Student Result Calculator</h3>
+
+                <p>
+                    A web application that calculates student
+                    total marks, percentage, and grade.
+                </p>
+
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+            </div>
+
+            <div class="card">
+                <h3>🚀 More Projects Soon</h3>
+
+                <p>
+                    I am practising and working on new projects.
+                    More exciting work is coming soon!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with ❤️ by Usman</p>
+        <p>Learning • Building • Growing</p>
+        <p>© 2026 Usman. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
