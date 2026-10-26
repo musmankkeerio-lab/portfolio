@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Student Result</title>
+
+      <style>
+             body {
+                 font-family: Algerian;
+                 background-color: aquamarine;
+                 text-align: center;
+                 padding: 35px;
+             }
+             .box {
+                 background-color:white;
+                 width: 450px;
+                 margin: auto;
+                 padding: 15px;
+                 border-radius: 15px;
+                 box-shadow: 0 0 20px #aaa;
+             }
+             input{
+                width: 90%;
+                 padding: 15px;
+                 margin: 5px;
+             }
+             button{
+                 padding: 10px 25px;
+                 background-color: rgb(70, 70, 35);
+                 color: white;
+                 border-radius: 10px;
+                 cursor: pointer;
+             }
+             #result{
+                margin-top: 10px 25px;
+                 font-size: 20px;
+             }
+      </style>
+
+</head>
+<body>
+    
+    <div class="box">
+        <h2> Student result </h2>
+        <input type="text" id="studentName" placeholder="student Name">
+        <input type="number" id="english" placeholder="English Marks">
+        <input type="number" id="maths" placeholder="Maths Marks">
+        <input type="number" id="biology" placeholder="Biology Marks">
+        <input type="number" id="chemistry" placeholder="Chemistry Marks">
+        <input type="number" id="physics" placeholder="Physics">
+        <br>
+        <button onclick="calculateResult()">calculate Result</button>
+        <div id="result"> </div>
+    </div>
+
+
+
+<script>
+        function calculateResult() {
+            let name = document.getElementById("studentName").value;
+
+            let english = Number(document.getElementById("english").value);
+
+            let maths = Number(document.getElementById("maths").value);
+
+            let biology = Number(document.getElementById("biology").value);
+
+            let chemistry = Number(document.getElementById("chemistry").value);
+
+            let physics = Number(document.getElementById("physics").value);
+
+
+
+            let total = english + maths + biology + chemistry + physics;
+
+
+            let percentage = total / 5;
+
+
+            let grade;
+
+
+
+            if (percentage >= 80) {
+                grade = "A+";
+            }else if (percentage >= 70) {
+                grade = "A";
+            }
+            else if (percentage >= 60) {
+                grade = "B";
+            }
+            else if (percentage >= 50) {
+                grade = "C";
+            }
+            else if (percentage >= 40) {
+              grade = "only pass";
+            }
+            else {
+               grade = "Fail";
+            }
+
+
+
+            document.getElementById("result").innerHTML = 
+            "Student: " + name + "<br>" +
+            "Total Marks: " + total + " / 500<br>" +
+            "Percentage: " + percentage.toFixed(2) + "%<br>" +
+            "Grade: " + grade;
+            
+        }
+</script>
+
+</body>
+</html>
