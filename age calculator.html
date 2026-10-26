@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    
+    <title>age caculator</title>
+   
+     <style>
+
+         body{
+             background-color: burlywood;
+             margin: auto;
+             padding: 40px;
+             text-align: center;
+             font-family: algerian;
+         }
+         .container{
+             background-color: rgb(106, 141, 141);
+             padding: 45px;
+             width: 450px;
+             border: none;
+             border-radius: 25px;
+             box-shadow: 0 0 15px rgb(187, 31, 31);
+             margin: auto;
+
+         }
+           input, button{
+               padding: 15px;
+               margin: 15px;
+           }
+         button{
+             background-color: maroon;
+             padding: 14px;
+             margin: auto;
+             border: none;
+             border-radius: 6px;
+             color: white;
+             cursor: pointer;
+         }  
+         #resulte{
+             color: black;
+             font-weight: bold;
+             font-size: 20px;
+             margin: auto;
+             padding: 23px;
+         }
+
+     </style>
+
+</head>
+<body>
+    
+     <div class="container">
+         <h1> age calculator </h1>
+
+         <label>  Enter Your Date Of Birth</label>
+         <br>
+
+         <input type="date" id="dob">
+         <br>
+
+         <button onclick="calculateAge()">
+            calculate Age
+        </button>
+        <div id="result"></div>
+     </div>
+
+         
+     <script>
+         function calculateAge() {
+
+             let dob = document.getElementById("dob").value;
+
+             if (dob === "") {
+                 document.getElementById("result").innerHTML =
+                 "plaese select your data of birth: ";
+                 return;
+             }
+
+             let birthDate = new Date(dob);
+             let today = new Date();
+
+             if (birthDate > today) {
+
+                 document.getElementById("result").innerHTML = 
+                     "plaese select your valid date!";
+                 return;
+             }
+             let age = today.getFullYear() -
+                birthDate.getFullYear();
+
+            let month = today.getMonth() -
+                birthDate.getMonth();
+            
+            if (
+                month < 0 || 
+                (month === 0 &&
+                today.getDate() < birthDate.getDate())
+            ) {
+                age--;
+            }
+             
+             document.getElementById("result").innerHTML = 
+             "your age is: " + age + "Years";
+
+         }
+
+
+     </script>
+
+
+</body>
+</html>
