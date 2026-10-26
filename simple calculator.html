@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>calculator</title>
+
+    <style>
+          body{
+              background-color: rgb(164, 174, 182);
+              font-family: algerian;
+              text-align: center;
+              padding: 30px;
+              color: white;
+          }
+          .box{
+              background-color: rgb(59, 53, 53);
+              width: 450px;
+              margin: auto;
+              padding: 35px;
+              font-size: 25px;
+              border-radius: 20px;
+              box-shadow:0 0  20px black;
+          }
+          input{
+              width: 150px;
+              margin: auto;
+              padding: 8px;
+              border-radius: 15px;
+          }
+          button{
+              background-color:rgb(4, 16, 144);
+              color: black;
+              padding: 8px;
+              width: 120px;
+              border-radius: 35px;   
+              cursor: pointer;
+          }
+          #result{
+              padding: 25px;
+              background-color: burlywood;
+              border-radius: 30px;
+              font-size: 25px;
+              color: black;
+              box-shadow: 0 0 18px white;
+          }
+    </style>
+
+
+</head>
+<body>
+
+         <div class="box">
+
+        <h4> Simple calculator </h4>
+        
+
+         <input type="number" id="num1" placeholder="Enter Frist Number">
+         <br>
+
+         <input type="number" id="num2" placeholder="Enter Second Number">
+         <br><br>
+
+         <button onclick="calculate('+')"> Addesion (+) </button>
+         <button onclick="calculate('-')"> Subtrection (-) </button>
+         <button onclick="calculate('*')"> Maltiplication (*) </button>
+         <button onclick="calculate('/')"> Division (/) </button>
+
+         <h2 id="result">Result: </h2>
+
+        </div>
+
+    <script>
+           
+           function calculate(operator) {
+
+               let a = Number(document.getElementById("num1").value);
+               let b = Number(document.getElementById("num2").value);
+
+               let result;
+
+               if (operator == '+') {
+                 result = a + b;
+                 
+               } else if (operator == '-') {
+                     result = a - b;
+
+               } else if (operator == '*') {
+                   result = a * b;
+
+               } else if (operator =='/') {
+                  if (b == 0) {
+
+                   document.getElementById("result").innerHTML = 
+                   "cannot divide by zero";
+                   return;
+                }
+                   result = a / b;
+               }
+
+               document.getElementById("result").innerHTML = 
+               "Result: " + result.toFixed(2); 
+           }
+
+    </script>
+</body>
+</html>
